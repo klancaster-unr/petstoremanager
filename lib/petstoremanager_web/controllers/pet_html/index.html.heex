@@ -1,0 +1,24 @@
+<h1 class="text-lg text-blue-800 font-bold">Pet Directory</h1>
+<table class="border border-slate-400 w-full  bg-white text-left text-sm text-gray-500">
+  <thead>
+    <tr>
+
+    <th class="border border-slate-300">Name</th>
+      <th class="border border-slate-300">Species</th>
+    <th class="border border-slate-300">Breed</th>
+    <th class="border border-slate-300">Owner</th>
+    <th class="border border-slate-300">Age</th>
+  </tr>
+  </thead>
+<tbody>
+  <%= for p <- @pets do %>
+      <tr>
+        <td class="border border-slate-300"><%= p.name %></td>
+        <td class="border border-slate-300"><%= p.species %> </td>
+        <td class="border border-slate-300"><%= p.breed || "unknown" %></td>
+        <td class="border border-slate-300"><%= p.owner %></td>
+        <td class="border border-slate-300"><%= p.age %></td>
+      </tr>
+      <% end %>
+  </tbody>
+</table>
